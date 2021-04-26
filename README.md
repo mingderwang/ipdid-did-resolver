@@ -19,7 +19,7 @@ $ npm install -g ipdid
 $ ipdid COMMAND
 running command...
 $ ipdid (-v|--version|version)
-ipdid/0.0.0 darwin-arm64 node-v16.0.0
+ipdid/0.0.1 darwin-arm64 node-v16.0.0
 $ ipdid --help [COMMAND]
 USAGE
   $ ipdid COMMAND
@@ -28,16 +28,17 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`ipdid test`](#ipdid-test)
+* [`ipdid hello`](#ipdid-hello)
 * [`ipdid help [COMMAND]`](#ipdid-help-command)
+* [`ipdid test`](#ipdid-test)
 
-## `ipdid test`
+## `ipdid hello`
 
 Describe the command here
 
 ```
 USAGE
-  $ ipdid test
+  $ ipdid hello
 
 OPTIONS
   -n, --name=name  name to print
@@ -47,7 +48,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/test.js](https://github.com/mingderwang/ipdid/blob/v0.0.0/src/commands/test.js)_
+_See code: [src/commands/hello.js](https://github.com/mingderwang/ipdid/blob/v0.0.1/src/commands/hello.js)_
 
 ## `ipdid help [COMMAND]`
 
@@ -65,4 +66,22 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `ipdid test`
+
+Describe the command here
+
+```
+USAGE
+  $ ipdid test
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/test.js](https://github.com/mingderwang/ipdid/blob/v0.0.1/src/commands/test.js)_
 <!-- commandsstop -->
