@@ -1,0 +1,56 @@
+{
+  "name": "ipdid",
+  "description": "The IPDID ecosystem",
+  "version": "0.0.0",
+  "author": "Ming-der Wang <mingderwang@gmail.com>",
+  "bin": {
+    "ipdid": "./bin/run"
+  },
+  "bugs": "https://github.com/mingderwang/ipdid/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "localhost": "^0.3.4"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "chai": "^4",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "globby": "^10",
+    "mocha": "^8.3.2",
+    "nyc": "^14"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/mingderwang/ipdid",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "ipdid",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "mingderwang/ipdid",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
