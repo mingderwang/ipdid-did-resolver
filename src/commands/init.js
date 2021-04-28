@@ -5,6 +5,7 @@ const CID = require('cids')
 const uint8ArrayFromString = require('uint8arrays/from-string')
 const uint8ArrayToString = require('uint8arrays/to-string')
 const Block = require('@ipld/block/defaults')
+const { encode, decode } = require('@ipld/dag-cbor')
 
 class InitCommand extends Command {
   async run() {
@@ -37,6 +38,12 @@ class InitCommand extends Command {
       }
     }, 2000)
 
+const get = async obj => {
+  const cid = new CID(obj)
+  const block = await ipfs.block.get(cid)
+  const data = decode(block.data)
+  return data
+}
 
 const save = async obj => {
   const block = Block.encoder(obj, 'dag-cbor')
@@ -59,7 +66,7 @@ const steve = await save({ name: 'Steve', interests: [ running, skating ] })
 console.log('Seeding Mikeal as ', mikeal.toString())
 console.log('Seeding Robert as ', robert.toString())
 console.log('Seeding Steve as ', steve.toString())
-
+console.log(await get(steve.toString()))
   }
 }
 
