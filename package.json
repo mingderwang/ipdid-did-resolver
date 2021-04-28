@@ -14,6 +14,8 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "cids": "^1.1.6",
+    "datastore-core": "^4.0.0",
+    "interface-datastore": "^4.0.0",
     "ipfs": "^0.54.4",
     "libp2p": "^0.31.0-rc.6",
     "libp2p-noise": "^3.0.0",

@@ -6,11 +6,25 @@ const uint8ArrayFromString = require('uint8arrays/from-string')
 const uint8ArrayToString = require('uint8arrays/to-string')
 const Block = require('@ipld/block/defaults')
 const { encode, decode } = require('@ipld/dag-cbor')
+const { Key, MemoryDatastore } = require('interface-datastore')
+const MountStore = require('datastore-core').MountDatastore
+const mds = new MemoryDatastore()
+const m = new MountStore([{
+      datastore: mds,
+      prefix: new Key('cool')
+    }])
+
 
 class InitCommand extends Command {
   async run() {
   //  const {flags} = this.parse(InitCommand)
   //  const name = flags.name |)| 'world'
+
+    const val = uint8ArrayFromString('hello')
+    await m.put(new Key('/cool/hello'), val)
+    const res = await mds.get(new Key('/hello'))
+console.log(uint8ArrayToString(res))
+
     const defaultOptions = getDefaultConfig()
     const ipfs = await IPFS.create({
       libp2p: defaultOptions

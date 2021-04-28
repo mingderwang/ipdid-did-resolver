@@ -1806,6 +1806,19 @@ datastore-core@^3.0.0:
     debug "^4.1.1"
     interface-datastore "^3.0.1"
 
+datastore-core@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/datastore-core/-/datastore-core-4.0.0.tgz#b62184244929109ba05f935fc2abb9d0d7cbb691"
+  integrity sha512-gTSysof1fKNNpNa2N3uCerp5zE10KvWci/OucmuR+4uWODLu3i6Egp6EDDC4mK/xPremRF9rj92jnGVBjCe5Zg==
+  dependencies:
+    debug "^4.1.1"
+    interface-datastore "^4.0.0"
+    it-filter "^1.0.2"
+    it-map "^1.0.5"
+    it-merge "^1.0.1"
+    it-take "^1.0.1"
+    uint8arrays "^2.1.5"
+
 datastore-fs@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/datastore-fs/-/datastore-fs-3.0.2.tgz#89f69cd9d171f763e7f1f4c0aff83ab9ebf12dc9"
@@ -4494,7 +4507,7 @@ it-length@^1.0.1:
   resolved "https://registry.yarnpkg.com/it-length/-/it-length-1.0.2.tgz#3e906d650532d914f55afce9c0b8b342321dec6e"
   integrity sha512-POIn66VMDhM1wzbKPSOGtldPldM5UQGV3ol85nmkv6HToIedetbJxPH6aX/fd19UamT7XtpakVyYb/NYCdD8DA==
 
-it-map@^1.0.2, it-map@^1.0.4:
+it-map@^1.0.2, it-map@^1.0.4, it-map@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/it-map/-/it-map-1.0.5.tgz#2f6a9b8f0ba1ed1aeadabf86e00b38c73a1dc299"
   integrity sha512-EElupuWhHVStUgUY+OfTJIS2MZed96lDrAXzJUuqiiqLnIKoBRqtX1ZG2oR0bGDsSppmz83MtzCeKLZ9TVAUxQ==
@@ -4503,6 +4516,13 @@ it-merge@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/it-merge/-/it-merge-1.0.0.tgz#b12310933ee79381eca2288245572a4f8d252030"
   integrity sha512-bs40LMjG/9JMOcJ7pgyGLoOeWBpw28ZoMmZIk/1NCa5SUxd4elXCuadAr2qSjPiHz2GxrqoWGFAP7SePGddatw==
+  dependencies:
+    it-pushable "^1.4.0"
+
+it-merge@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/it-merge/-/it-merge-1.0.1.tgz#74a12045147981777e812a9b098823f2bc8ac882"
+  integrity sha512-1V1wDlzGaPprEGxwRJUMkoKvjZJCaqRp0o7i5fD3LeY7K2ZL5hmtHJnRTXHqJf9wO2ovzOjqxBUtFK4c3HAF0g==
   dependencies:
     it-pushable "^1.4.0"
 
