@@ -28,17 +28,16 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`ipdid hello`](#ipdid-hello)
+* [`ipdid init`](#ipdid-init)
 * [`ipdid help [COMMAND]`](#ipdid-help-command)
-* [`ipdid test`](#ipdid-test)
 
-## `ipdid hello`
+## `ipdid init`
 
 Describe the command here
 
 ```
 USAGE
-  $ ipdid hello
+  $ ipdid init
 
 OPTIONS
   -n, --name=name  name to print
@@ -48,7 +47,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/hello.js](https://github.com/mingderwang/ipdid/blob/v0.0.1/src/commands/hello.js)_
+_See code: [src/commands/init.js](https://github.com/mingderwang/ipdid/blob/v0.0.1/src/commands/init.js)_
 
 ## `ipdid help [COMMAND]`
 
