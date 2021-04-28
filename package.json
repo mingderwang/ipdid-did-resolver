@@ -8,6 +8,7 @@
   },
   "bugs": "https://github.com/mingderwang/ipdid/issues",
   "dependencies": {
+    "@ipld/block": "^6.0.4",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",

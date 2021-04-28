@@ -372,6 +372,29 @@
     "@hapi/bourne" "2.x.x"
     "@hapi/hoek" "9.x.x"
 
+"@ipld/block@^6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@ipld/block/-/block-6.0.4.tgz#ffa03fedc111668b95408439ed950e1d109b9760"
+  integrity sha512-2g6SpxZLQBRaBWV8c+++9X+QUsNAdGFrFyDTDN1LUsssZn/lcUP+fpEb3nhRUEoVwkiySbA/MnTXO2YZ6QAtSw==
+  dependencies:
+    "@ipld/dag-cbor" "1.1.11"
+    class-is "^1.1.0"
+    lodash.transform "^4.6.0"
+    multiformats "^3.0.3"
+
+"@ipld/dag-cbor@1.1.11":
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/@ipld/dag-cbor/-/dag-cbor-1.1.11.tgz#4ea49458612785b38f9fea7fd33cce9cfe2dfc31"
+  integrity sha512-Dkwi5MqJw58tZKu2i+PwsNRdBU1t76fWE8XchDfgWLbOVhrZJkiFskoveRlBBPWt23Sm4gZD92mGSpckuR60FA==
+  dependencies:
+    "@ipld/is-circular" "^1.0.3"
+    borc "^2.1.2"
+
+"@ipld/is-circular@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@ipld/is-circular/-/is-circular-1.0.3.tgz#f248972955a06ea9d5bb9b031af244c9c4e812a2"
+  integrity sha512-ic20mK4OZaTE6P+ShCkc+L3RegedjUwELeBxOpqgEuJMcQDjp4AS/dh3o3udDcM8q2zSEvc5q7Ex6pJzSuFWLQ==
+
 "@motrix/nat-api@^0.3.1":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@motrix/nat-api/-/nat-api-0.3.1.tgz#de18e7101cc6ed82e9e1e7b5720cb2b40f490246"
@@ -1054,6 +1077,13 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+base-x@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/base-x/-/base-x-3.0.8.tgz#1e1106c2537f0162e8b52474a557ebb09000018d"
+  integrity sha512-Rl/1AWP4J/zRrk54hhlxH4drNxPJXYUaKffODVI53/dAsV4t9fBxyxYKAVPU1XBHxYwOWP9h9H0hM2MVw4YfJA==
+  dependencies:
+    safe-buffer "^5.0.1"
 
 base32.js@~0.1.0:
   version "0.1.0"
@@ -5480,6 +5510,11 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
+lodash.transform@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.transform/-/lodash.transform-4.6.0.tgz#12306422f63324aed8483d3f38332b5f670547a0"
+  integrity sha1-EjBkIvYzJK7YSD0/ODMrX2cFR6A=
+
 lodash.upperfirst@^4.2.0:
   version "4.3.1"
   resolved "https://registry.npmjs.org/lodash.upperfirst/-/lodash.upperfirst-4.3.1.tgz"
@@ -5860,6 +5895,16 @@ multicodec@^3.0.1:
   dependencies:
     uint8arrays "^2.1.3"
     varint "^5.0.2"
+
+multiformats@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-3.0.3.tgz#c832a697e8f5046206a7fa1d89489a904fb3780f"
+  integrity sha512-3mZPFH5vNYj4VxQBWik5kqXFKFMHUpH4iJ0gdP6vF3+n1Wk5+BvasxXs3kO9K7pCwatkJ2G6bMAa8bruQpuYQg==
+  dependencies:
+    base-x "^3.0.8"
+    buffer "^5.6.0"
+    cids "^1.0.0"
+    varint "^5.0.0"
 
 multihashes@^3.0.1, multihashes@^3.1.1:
   version "3.1.2"
