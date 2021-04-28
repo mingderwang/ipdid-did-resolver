@@ -4,10 +4,8 @@ const PeerId = require('peer-id')
 class IdCommand extends Command {
   async run() {
     const id = await PeerId.create({ bits: 1024, keyType: 'RSA' })
-console.log(JSON.stringify(id.toJSON(), null, 2))
-    const {flags} = this.parse(IdCommand)
-    const name = flags.name || 'world'
-    this.log(`show DID ${name} from ./src/commands/id.js`)
+    const json = "did:ipdid:"+id.toJSON().id
+    this.log(`local DID is ${json}`)
   }
 }
 
