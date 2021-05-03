@@ -19,7 +19,7 @@ $ npm install -g ipdid
 $ ipdid COMMAND
 running command...
 $ ipdid (-v|--version|version)
-ipdid/0.0.2 darwin-arm64 node-v16.0.0
+ipdid/0.0.3 darwin-arm64 node-v16.0.0
 $ ipdid --help [COMMAND]
 USAGE
   $ ipdid COMMAND
@@ -29,10 +29,12 @@ USAGE
 # Commands
 <!-- commands -->
 * [`ipdid daemon`](#ipdid-daemon)
+* [`ipdid did`](#ipdid-did)
 * [`ipdid help [COMMAND]`](#ipdid-help-command)
 * [`ipdid id`](#ipdid-id)
 * [`ipdid init`](#ipdid-init)
 * [`ipdid key`](#ipdid-key)
+* [`ipdid signer`](#ipdid-signer)
 
 ## `ipdid daemon`
 
@@ -50,7 +52,25 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/daemon.js](https://github.com/mingderwang/ipdid/blob/v0.0.2/src/commands/daemon.js)_
+_See code: [src/commands/daemon.js](https://github.com/mingderwang/ipdid/blob/v0.0.3/src/commands/daemon.js)_
+
+## `ipdid did`
+
+create a new IPDID ipfs
+
+```
+USAGE
+  $ ipdid did
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/did.js](https://github.com/mingderwang/ipdid/blob/v0.0.3/src/commands/did.js)_
 
 ## `ipdid help [COMMAND]`
 
@@ -87,7 +107,7 @@ DESCRIPTION
   show your DID in details
 ```
 
-_See code: [src/commands/id.js](https://github.com/mingderwang/ipdid/blob/v0.0.2/src/commands/id.js)_
+_See code: [src/commands/id.js](https://github.com/mingderwang/ipdid/blob/v0.0.3/src/commands/id.js)_
 
 ## `ipdid init`
 
@@ -105,7 +125,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/mingderwang/ipdid/blob/v0.0.2/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/mingderwang/ipdid/blob/v0.0.3/src/commands/init.js)_
 
 ## `ipdid key`
 
@@ -123,5 +143,24 @@ DESCRIPTION
   --long format
 ```
 
-_See code: [src/commands/key.js](https://github.com/mingderwang/ipdid/blob/v0.0.2/src/commands/key.js)_
+_See code: [src/commands/key.js](https://github.com/mingderwang/ipdid/blob/v0.0.3/src/commands/key.js)_
+
+## `ipdid signer`
+
+create a singer's key pair and save on ~/.ipdid_keystore.json
+
+```
+USAGE
+  $ ipdid signer
+
+OPTIONS
+  --help  show CLI help
+
+DESCRIPTION
+  ...
+  return your DID for signer if ~/.ipdid_keystore.json exist
+  otherwise, create a new one.
+```
+
+_See code: [src/commands/signer.js](https://github.com/mingderwang/ipdid/blob/v0.0.3/src/commands/signer.js)_
 <!-- commandsstop -->
