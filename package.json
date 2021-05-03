@@ -17,7 +17,6 @@
     },
     "scripts": {
         "compile": "tsc",
-        "test": "jest --env=node --colors --coverage test",
         "dev": "microbundle watch",
         "build": "microbundle"
     },
