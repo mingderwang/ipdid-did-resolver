@@ -1,6 +1,6 @@
 {
     "name": "ipdid-did-resolver",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "DID Resolver for IPDID/IPFS documents",
     "main": "dist/index.js",
     "source": "src/index.ts",
