@@ -8,6 +8,8 @@
   },
   "bugs": "https://github.com/mingderwang/ipdid/issues",
   "dependencies": {
+    "@digitalbazaar/ed25519-signature-2020": "^2.1.0",
+    "@digitalbazaar/ed25519-verification-key-2020": "^2.1.1",
     "@ipld/block": "^6.0.4",
     "@ipld/dag-cbor": "^5.0.0",
     "@oclif/command": "^1",
@@ -17,9 +19,11 @@
     "datastore-core": "^4.0.0",
     "interface-datastore": "^4.0.0",
     "ipfs": "^0.54.4",
+    "jsonfile": "^6.1.0",
     "libp2p": "^0.31.0-rc.6",
     "libp2p-noise": "^3.0.0",
     "localhost": "^0.3.4",
+    "os": "^0.1.1",
     "uint8arrays": "^2.1.5"
   },
   "devDependencies": {
