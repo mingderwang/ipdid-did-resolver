@@ -4,7 +4,6 @@ import { Resolver } from 'did-resolver'
 import { getResolver } from 'ipdid-did-resolver'
 
 const webDidResolver = getResolver()
-console.log(webDidResolver)
 const didResolver = new Resolver(webDidResolver)
 function App() {
   const [did, setDid] = useState('did:ipdid:bafyreicwxnezzqppzskolg6pvwu2ri5pnepjvbsvgzpb4nn7devfxpskrm')
@@ -27,9 +26,8 @@ function App() {
           didResolver
             .resolve(did)
             .then((res) => {
-              console.log('resolved data', res)
-              setDIDDocument(JSON.stringify(res, null, 2))
               setResolved(true)
+              setDIDDocument(JSON.stringify(res.didDocument))
             })
             .catch((err) => {
               console.error('failed to resolve', err)
@@ -42,7 +40,9 @@ function App() {
       <p>
         {resolved === true && `resolved ${did}`}
         {resolved === false && `failed to resolve ${did}`}
-        {resolved === true && `<h5>${diddoc.didDocument}</h5>` }
+      </p>
+      <p>
+        {resolved === true && `${diddoc}`}
       </p>
     </div>
   )
