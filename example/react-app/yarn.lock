@@ -1564,6 +1564,14 @@
     "@ipld/is-circular" "^1.0.3"
     borc "^2.1.2"
 
+"@ipld/dag-cbor@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@ipld/dag-cbor/-/dag-cbor-5.0.0.tgz#7b207c3e58577cd53ed238b192d0913e1d044a69"
+  integrity sha512-5jsM3W38Wk1mrqtrD+DmJpgLJgDrXQ9H3LU8inDKZvpOma0srNA35xcc21N1mGRDZPmfF2H35SdTYaUtAK35Zg==
+  dependencies:
+    cborg "^1.2.1"
+    multiformats "^7.0.0"
+
 "@ipld/is-circular@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@ipld/is-circular/-/is-circular-1.0.3.tgz#f248972955a06ea9d5bb9b031af244c9c4e812a2"
@@ -3885,6 +3893,11 @@ cbor@^6.0.1:
     bignumber.js "^9.0.1"
     nofilter "^1.0.4"
 
+cborg@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/cborg/-/cborg-1.2.1.tgz#5d8a7a5a360d13ee62e07928d9ae0c7b7e4983a2"
+  integrity sha512-eA14hhjU6a9QxCvam/hdRl5LMLfqB1YGG/VA5woI5LxVDjh7kDiRxFp/uSfYQjAGVuk2BvSjx7L60u+B1k3gGw==
+
 chai-checkmark@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/chai-checkmark/-/chai-checkmark-1.0.1.tgz#9fbb3c9ad9101f097ef288328d30f4227d74fffb"
@@ -4019,7 +4032,7 @@ cid-tool@^1.0.0:
     uint8arrays "^1.1.0"
     yargs "^15.0.2"
 
-cids@^1.0.0, cids@^1.1.5:
+cids@^1.0.0, cids@^1.1.5, cids@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/cids/-/cids-1.1.6.tgz#ac7aea7dbcabaa64ca242b5d970d596a5c34d006"
   integrity sha512-5P+Jas2bVpjiHibp/SOwKY+v7JhAjTChaAZN+vCIrsWXn/JZV0frX22Vp5zZgEyJRPco79pX+yNQ2S3LkRukHQ==
@@ -4484,6 +4497,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+cross-fetch@^3.1.2:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
+  integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
+  dependencies:
+    node-fetch "2.6.1"
 
 cross-spawn@7.0.3, cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
@@ -7317,6 +7337,8 @@ ipdid-did-resolver@../..:
   version "0.0.0"
   dependencies:
     "@ipld/block" "^6.0.4"
+    "@ipld/dag-cbor" "^5.0.0"
+    cids "^1.1.6"
     datastore-core "^4.0.0"
     did-resolver "^3.1.0"
     interface-datastore "^4.0.0"
@@ -10615,6 +10637,14 @@ multiformats@^3.0.3:
     cids "^1.0.0"
     varint "^5.0.0"
 
+multiformats@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-7.0.0.tgz#84f5a8ff40e54643a9573bb25b107be878e48e43"
+  integrity sha512-B39Rk603Ri8AKHCVhRGwZk+MfxqcxsDxgvja801cMoPJRk4BvS6kxDr5C0331JvnQDK4phJBfMQjcTlwfOAImw==
+  dependencies:
+    buffer "^6.0.3"
+    cids "^1.1.6"
+
 multihashes@^3.0.1, multihashes@^3.1.1:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/multihashes/-/multihashes-3.1.2.tgz#ffa5e50497aceb7911f7b4a3b6cada9b9730edfc"
@@ -10796,7 +10826,7 @@ node-addon-api@^2.0.0:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-2.0.2.tgz#432cfa82962ce494b132e9d72a15b29f71ff5d32"
   integrity sha512-Ntyt4AIXyaLIuMHF6IOoTakB3K+RWxwtsHNRxllEoA6vPwP9o4866g6YWDLUdnucilZhmkxiHwHr11gAENw+QA==
 
-node-fetch@^2.6.0, node-fetch@^2.6.1:
+node-fetch@2.6.1, node-fetch@^2.6.0, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
@@ -15333,6 +15363,14 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
+
+web-did-resolver@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/web-did-resolver/-/web-did-resolver-2.0.4.tgz#5a26cc96b1c6924191687ecc8cdb2ce5ef66805b"
+  integrity sha512-PORpoA4P0I3m0cLJX2IIDZ0gMKgC1PjS8DuDeg9/JCdIlFiXrZCyTG1hxvw4a4vhDKr0sZKSZL1pQDXTgqLm8w==
+  dependencies:
+    cross-fetch "^3.1.2"
+    did-resolver "^3.1.0"
 
 web-encoding@^1.0.2, web-encoding@^1.0.6:
   version "1.1.5"

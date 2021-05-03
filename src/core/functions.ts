@@ -1,13 +1,14 @@
 import {
   DIDResolutionResult,
-  DIDResolutionOptions,
-  Resolver,
+  DIDDocument,
   ParsedDID
 } from 'did-resolver'
-const { Block } = require('@ipld/block')
-const uint8ArrayToString = require('uint8arrays/to-string')
+const Block = require('@ipld/block/defaults')
+//const uint8ArrayToString = require('uint8arrays/to-string')
 const uint8ArrayFromString = require('uint8arrays/from-string')
 const IPFS = require('ipfs')
+const CID = require('cids')
+const { decode } = require('@ipld/dag-cbor')
 import { getDefaultConfig } from "../utils"
 const defaultOptions = getDefaultConfig()
 const MountStore = require('datastore-core').MountDatastore
@@ -62,8 +63,6 @@ export function getResolver() {
   async function resolve(
     did: string,
     parsed: ParsedDID,
-    didResolver: Resolver,
-    options: DIDResolutionOptions
   ): Promise<DIDResolutionResult> {
 
 const ipfs = await IPFS.create({
@@ -79,13 +78,14 @@ const save = async (obj: any) => {
   return cid
 }
 
+const get = async (obj: any) => {
+  const cid = new CID(obj)
+  const block = await ipfs.block.get(cid)
+  const data = decode(block.data)
+  return data
+}
 
-console.log("🐝 12345 -> ")
-console.log("🐝 12345 -> ")
-console.log("🐝 12345 -> ")
-console.log("🐝 12345 -> ")
-console.log("🐝 12345 -> ")
-console.log("🐝 12345 -> ")
+/*
 setInterval(async () => {
   try {
     const peers = await ipfs.swarm.peers()
@@ -94,24 +94,35 @@ setInterval(async () => {
     console.log('An error occurred trying to check our peers:', err)
   }
 }, 2000)
+*/
 
-    console.log('parsed'+ parsed)
-    save(diddoc)
+    console.log('parsed: '+ parsed)
+console.log("🐝 12345 -> ")
+
+    const diddoc2 = await save(diddoc)
     // {method: 'mymethod', id: 'abcdefg', did: 'did:mymethod:abcdefg/some/path#fragment=123', path: '/some/path', fragment: 'fragment=123'}
     const val = uint8ArrayFromString(diddoc)
-    console.log(val)
+    console.log(diddoc2.toString())
+const didDoc = await get(diddoc2.toString())
+//console.log(didDoc)
+console.log("🐝 12:19345 -> ")
+
+const didDocumentMetadata = {}
+    let didDocument: DIDDocument | null = null
+    didDocument = JSON.parse(didDoc)
+
     await m.put(new Key('/cool/did:ipdid:QmaYBs1gdu2Q6DAcfHVVq4NqysfbrHjnTzhUdajWyrDYxq'), val)
-    const didDoc = await mds.get(new Key('did:ipdid:QmaYBs1gdu2Q6DAcfHVVq4NqysfbrHjnTzhUdajWyrDYxq'))
-console.log(uint8ArrayToString(didDoc))
+    //const didDoc = await mds.get(new Key('did:ipdid:QmaYBs1gdu2Q6DAcfHVVq4NqysfbrHjnTzhUdajWyrDYxq'))
     // If you need to lookup another did as part of resolving this did document, the primary DIDResolver object is passed in as well
     // const parentDID = await didResolver.resolve(did)
     // Return the DIDResolutionResult object
+    console.log(didDocument)
     return {
       didResolutionMetadata: { contentType: 'application/did+ld+json' },
-      didDocument: didDoc,
-      didDocumentMetadata: {}
+      didDocument,
+      didDocumentMetadata
     }
   }
 
-  return { myMethod: resolve }
+  return { ipdid: resolve }
 }
