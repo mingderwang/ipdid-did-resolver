@@ -1,6 +1,6 @@
 {
     "name": "ipdid-did-resolver",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "DID Resolver for IPDID/IPFS documents",
     "main": "dist/index.js",
     "source": "src/index.ts",
@@ -30,11 +30,11 @@
         "uint8arrays": "^2.1.5"
     },
     "repository": {
-      "type": "git",
-      "url": "https://github.com/IPDID/ipdid-did-resolver.git"
+        "type": "git",
+        "url": "https://github.com/IPDID/ipdid-did-resolver.git"
     },
     "bugs": {
-      "url": "https://github.com/IPDID/ipdid-did-resolver/issues"
+        "url": "https://github.com/IPDID/ipdid-did-resolver/issues"
     },
     "homepage": "https://github.com/mingderwang/ipdid-did-resolver"
 }
