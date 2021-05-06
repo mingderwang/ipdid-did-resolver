@@ -6,7 +6,7 @@ import { getResolver } from 'ipdid-did-resolver'
 const webDidResolver = getResolver()
 const didResolver = new Resolver(webDidResolver)
 function App() {
-  const [did, setDid] = useState('did:ipdid:bafyreicwxnezzqppzskolg6pvwu2ri5pnepjvbsvgzpb4nn7devfxpskrm')
+  const [did, setDid] = useState('did:ipdid:bafyreicsxjumhqp2fi66ju4eqo5v53eghf4vlt4smlnzt6hcwmwigksiny')
   const [resolved, setResolved] = useState()
   const [diddoc, setDIDDocument] = useState('')
   return (

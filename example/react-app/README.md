@@ -1,5 +1,16 @@
-## Available Scripts
+# IPDID DID resolver react-app demo
+To demo how [ipdid-did-resolver](https://www.npmjs.com/package/ipdid-did-resolver) works.
 
+## live demo
+deploy to vercel -> [here](https://react-app-blush.vercel.app)
+
+## test sample DID
+```
+did:ipdid:bafyreicsxjumhqp2fi66ju4eqo5v53eghf4vlt4smlnzt6hcwmwigksiny
+```
+You can also create your own IPDID signer, verifiable credential DID with [ipdid CLI](https://www.npmjs.com/package/ipdid)
+
+## build and run
 In the project directory, you can run:
 
 ### `npm start`
@@ -10,12 +21,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.

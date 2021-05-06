@@ -7333,8 +7333,10 @@ ipaddr.js@1.9.1, ipaddr.js@^1.9.0:
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
 
-ipdid-did-resolver@../..:
-  version "0.0.0"
+ipdid-did-resolver@latest:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/ipdid-did-resolver/-/ipdid-did-resolver-0.0.4.tgz#bbe8cfa947997b1c67f6f09c4830a1a803e3516c"
+  integrity sha512-hggCRyFcbxpcwe/CUGKUP2RP1Q51Q/dy0xQJXFcONlseU0MafxGGQ/ED0LMMWjK8jn8zvtsKwYlGcCjLUMRW5g==
   dependencies:
     "@ipld/block" "^6.0.4"
     "@ipld/dag-cbor" "^5.0.0"
